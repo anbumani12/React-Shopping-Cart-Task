@@ -8,14 +8,14 @@ function Card({ cart, setCart, data, index }) {
   return (
     <div className="col mb-5">
       <div className="card h-100 d-flex flex-column">
-        {data.sale && (
+        {data.sale ? (<>
           <div
             className="badge bg-dark text-white position-absolute"
             style={{ top: "0.5rem", right: "0.5rem" }}
           >
             Sale
           </div>
-        )}
+        </>):("")}
         <img className="card-img-top" src={data.image} alt="..." />
         <div className="card-body p-4 flex-fill">
           <div className="text-center">
