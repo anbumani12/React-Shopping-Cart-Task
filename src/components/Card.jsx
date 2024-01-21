@@ -20,13 +20,20 @@ function Card({ cart, setCart, data, index }) {
         <div className="card-body p-4 flex-fill">
           <div className="text-center">
             <h5 className="fw-bolder">{data.name}</h5>
-            {data.reviews && (
-              <div className="d-flex justify-content-center small text-warning mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <div key={i} className="bi-star-fill"></div>
-                ))}
-              </div>
+            {data.reviews ? (
+              <>
+                <div className="d-flex justify-content-center small text-warning mb-2">
+                  <div className="bi-star-fill"></div>
+                  <div className="bi-star-fill"></div>
+                  <div className="bi-star-fill"></div>
+                  <div className="bi-star-fill"></div>
+                  <div className="bi-star-fill"></div>
+                </div>
+              </>
+            ) : (
+              ""
             )}
+
             {data.original ? (
               <div>
                 <span className="text-muted text-decoration-line-through">
