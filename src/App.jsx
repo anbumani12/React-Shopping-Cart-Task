@@ -63,7 +63,7 @@ function App() {
       price: "$120.00 - $280.00",
       sale: false,
       originalPrice: "",
-      original: true,
+      original: false,
       reviews: false,
       action: "View options",
     },
